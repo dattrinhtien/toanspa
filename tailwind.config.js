@@ -9,34 +9,49 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0B4F6C",
-          light: "#1A5F7A",
-          dark: "#063246",
-          50: "#F0F7FA",
-          100: "#D8ECF3",
-          500: "#0B4F6C",
-          600: "#094159",
-          700: "#063246",
+          DEFAULT: "#3D2314", // Nâu đất quý phái T&T Spa
+          light: "#5A3620",
+          dark: "#26140A",
+          50: "#FDFBF7",
+          100: "#F5ECE3",
+          500: "#3D2314",
+          600: "#321C10",
+          700: "#26140A",
+        },
+        gold: {
+          DEFAULT: "#C59B27", // Vàng kim Gold chính thức của Logo T&T
+          light: "#D4AF37",
+          dark: "#A37A17",
+          soft: "#FAF3E0",
+          50: "#FDFBF5",
+          100: "#F7EED2",
+          600: "#B3861B",
+          700: "#8C6710",
         },
         sage: {
-          DEFAULT: "#2E7D32",
-          light: "#4E9F3D",
-          soft: "#E8F5E9",
-          50: "#F1F8F2",
-          100: "#DCEDC8",
-          600: "#256628",
-          700: "#1B4D1E",
+          DEFAULT: "#C59B27", // Giữ tương thích với các class sage hiện có
+          light: "#D4AF37",
+          soft: "#FAF3E0",
+          50: "#FDFBF5",
+          100: "#F7EED2",
+          600: "#B3861B",
+          700: "#8C6710",
+        },
+        herbal: {
+          DEFAULT: "#3A6351", // Xanh thảo mộc dưỡng sinh
+          light: "#4E7C67",
+          soft: "#EBF2EE",
         },
         surface: {
           DEFAULT: "#FFFFFF",
-          cream: "#FAF9F6",
-          muted: "#F8F9FA",
-          border: "#E2E8F0",
+          cream: "#FAF7F2",
+          muted: "#F5EFE6",
+          border: "#E8DFD5",
         },
         charcoal: {
-          DEFAULT: "#1E293B",
-          muted: "#64748B",
-          soft: "#94A3B8",
+          DEFAULT: "#2B1F17",
+          muted: "#6B594E",
+          soft: "#9C897E",
         }
       },
       fontFamily: {
@@ -44,12 +59,11 @@ module.exports = {
         display: ["var(--font-heading)", "serif"],
       },
       boxShadow: {
-        'soft': '0 4px 20px -2px rgba(11, 79, 108, 0.08)',
-        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
-        'elevated': '0 20px 40px -10px rgba(11, 79, 108, 0.12)',
+        'soft': '0 4px 20px -2px rgba(61, 35, 20, 0.08)',
+        'card': '0 10px 30px -5px rgba(61, 35, 20, 0.1)',
+        'elevated': '0 20px 40px -10px rgba(61, 35, 20, 0.2)',
       }
     },
   },
   plugins: [],
 };
-

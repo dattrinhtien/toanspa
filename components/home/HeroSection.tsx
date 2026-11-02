@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ShieldCheck, HeartHandshake, Sparkles, CheckCircle, Award } from 'lucide-react';
+import { HeartHandshake, Sparkles, CheckCircle2, Phone, Award, ShieldCheck, Flame } from 'lucide-react';
 import { Button } from '@/components/shared/Button';
 import { ConsultationModal } from '@/components/shared/ConsultationModal';
 
@@ -18,46 +17,93 @@ export function HeroSection() {
 
   return (
     <>
-      <section className="relative overflow-hidden pt-8 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-primary-50/60 via-white to-surface-muted">
-        {/* Nền hoa văn trang trí tinh tế */}
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-sage-50 blur-3xl opacity-60 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-primary-100 blur-3xl opacity-40 pointer-events-none" />
+      <section className="relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-20 bg-gradient-to-b from-[#FAF7F2] via-white to-surface-muted">
+        {/* Họa tiết trang trí tone ấm */}
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-gold/10 blur-3xl opacity-70 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl opacity-50 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Banner chính thức FACE MASSAGE ROOT sắc nét 2560x947 */}
+          <div className="mb-12 relative w-full h-[220px] sm:h-[320px] md:h-[400px] lg:h-[460px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#26140A] group">
+            <Image
+              src="/images/banner-face-massage-root.jpg"
+              alt="T&T SPA - Face Massage Root - Chăm Sóc Sức Khỏe Từ Gốc"
+              fill
+              priority
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              className="object-cover object-center group-hover:scale-102 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 flex items-center gap-3">
+              <a
+                href="tel:0358363058"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold text-[#26140A] font-extrabold text-xs sm:text-sm shadow-elevated hover:bg-gold-light transition-colors"
+              >
+                <Phone className="w-4 h-4 animate-bounce" /> Hotline: 0358.363.058
+              </a>
+              <span className="text-white text-xs sm:text-sm font-semibold drop-shadow-md hidden sm:inline-block">
+                Phương pháp Massage Mặt Trị Liệu Độc Quyền
+              </span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             {/* Cột chữ bên trái */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div className="lg:col-span-8 space-y-6 text-center lg:text-left">
               {/* Badge nhận diện */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-soft">
-                <span className="w-2.5 h-2.5 rounded-full bg-sage animate-pulse" />
-                <span className="text-xs sm:text-sm font-semibold text-primary">
-                  Trần Thị Toàn (Toàn Heshi) • Chuyên Gia Chăm Sóc Sức Khỏe Từ Gốc
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gold/30 shadow-soft">
+                <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse" />
+                <span className="text-xs sm:text-sm font-bold text-primary">
+                  T&T Spa • Trần Thị Toàn (Toàn T&T) • Chăm Sóc Sức Khỏe Từ Gốc
                 </span>
               </div>
 
               {/* Tiêu đề chính */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.85rem] font-bold text-primary font-display leading-[1.25] tracking-tight">
-                Chăm Sóc Sức Khỏe Từ Gốc – 10 Năm Đồng Hành Cùng Làn Da & Thể Chất
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary font-display leading-[1.25] tracking-tight">
+                Face Massage Root – Massage Mặt Kích Hoạt Tự Tái Tạo Từ Gốc Rễ Cơ Thể
               </h1>
 
-              {/* Mô tả ngắn */}
-              <p className="text-base sm:text-lg text-charcoal-muted leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Kết hợp chuẩn hóa giữa <strong>Trị liệu Spa chuẩn Y khoa</strong>, <strong>Vận động phục hồi linh hoạt</strong> và <strong>Dinh dưỡng chuyển hóa tế bào</strong>. Xây dựng nền tảng cơ thể vững chắc và làn da tươi trẻ tự nhiên từ sâu bên trong.
+              {/* Triết lý Fanpage */}
+              <p className="text-base sm:text-lg text-charcoal-muted leading-relaxed max-w-3xl">
+                <em>"Chúng tôi không chỉ nhìn vào bề mặt làn da. Chúng tôi nhìn sâu hơn – vào tận gốc rễ."</em> Hơn 9 năm nghiên cứu và đồng hành cùng các chuyên gia hàng đầu về da, dưỡng sinh và y học tự nhiên, phương pháp <strong>Face Massage Root</strong> đánh thức nguồn năng lượng tự chữa lành kỳ diệu của cơ thể.
               </p>
 
-              {/* Danh sách cam kết cốt lõi */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 pb-2 text-left">
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-charcoal font-medium">
-                  <CheckCircle className="w-4 h-4 text-sage flex-shrink-0" />
-                  <span>Chuẩn hóa Y khoa</span>
+              {/* 3 trụ cột kỹ thuật của Face Massage Root */}
+              <div id="face-massage-root" className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2 pb-2 text-left">
+                <div className="p-3.5 rounded-2xl bg-white border border-gold/20 shadow-soft">
+                  <div className="w-8 h-8 rounded-xl bg-gold/15 text-gold flex items-center justify-center font-bold text-xs mb-2">
+                    01
+                  </div>
+                  <h4 className="text-xs font-bold text-primary mb-1">
+                    Tự Sửa Chữa & Tái Tạo
+                  </h4>
+                  <p className="text-[11px] text-charcoal-muted leading-relaxed">
+                    Kích hoạt chức năng tự phục hồi tế bào tự nhiên từ gốc rễ của cơ thể.
+                  </p>
                 </div>
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-charcoal font-medium">
-                  <CheckCircle className="w-4 h-4 text-sage flex-shrink-0" />
-                  <span>Kiềng 3 chân bền vững</span>
+
+                <div className="p-3.5 rounded-2xl bg-white border border-gold/20 shadow-soft">
+                  <div className="w-8 h-8 rounded-xl bg-gold/15 text-gold flex items-center justify-center font-bold text-xs mb-2">
+                    02
+                  </div>
+                  <h4 className="text-xs font-bold text-primary mb-1">
+                    Đồng Ứng Nội Tạng
+                  </h4>
+                  <p className="text-[11px] text-charcoal-muted leading-relaxed">
+                    Kích hoạt đồng ứng chức năng tự chữa lành lên các cơ quan nội tạng bên trong.
+                  </p>
                 </div>
-                <div className="flex items-center gap-2 text-xs sm:text-sm text-charcoal font-medium">
-                  <CheckCircle className="w-4 h-4 text-sage flex-shrink-0" />
-                  <span>Chuyển giao thực chiến</span>
+
+                <div className="p-3.5 rounded-2xl bg-white border border-gold/20 shadow-soft">
+                  <div className="w-8 h-8 rounded-xl bg-gold/15 text-gold flex items-center justify-center font-bold text-xs mb-2">
+                    03
+                  </div>
+                  <h4 className="text-xs font-bold text-primary mb-1">
+                    Trị Liệu Chuyên Sâu
+                  </h4>
+                  <p className="text-[11px] text-charcoal-muted leading-relaxed">
+                    Massage sâu tổng thể giải tỏa ách tắc toàn diện vùng Mặt – Đầu – Cổ Vai Gáy.
+                  </p>
                 </div>
               </div>
 
@@ -67,77 +113,58 @@ export function HeroSection() {
                   size="lg"
                   variant="primary"
                   onClick={() => openModal('transfer')}
-                  className="w-full sm:w-auto shadow-elevated"
+                  className="w-full sm:w-auto bg-primary hover:bg-primary-light text-white shadow-elevated"
                 >
-                  <HeartHandshake className="w-5 h-5 mr-2" />
-                  Khám phá mô hình chuyển giao
+                  <HeartHandshake className="w-5 h-5 mr-2 text-gold-light" />
+                  Chuyển giao mô hình T&T Spa
                 </Button>
 
                 <Button
                   size="lg"
                   variant="outline"
                   onClick={() => openModal('skincare')}
-                  className="w-full sm:w-auto bg-white"
+                  className="w-full sm:w-auto bg-white border-gold text-primary hover:bg-gold/10"
                 >
-                  <Sparkles className="w-5 h-5 mr-2 text-sage" />
-                  Đặt lịch tư vấn trị liệu
+                  <Sparkles className="w-5 h-5 mr-2 text-gold" />
+                  Đặt lịch trải nghiệm trị liệu
                 </Button>
               </div>
-
-              {/* Lời chứng nhận chân thực */}
-              <p className="text-xs text-charcoal-soft italic text-center lg:text-left">
-                * Dành cho cả đối tác B2B (Chủ Spa muốn nâng cấp mô hình) và khách hàng cá nhân B2C (Cần phục hồi da & cơ xương khớp).
-              </p>
             </div>
 
-            {/* Cột hình ảnh bên phải */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative mx-auto max-w-sm sm:max-w-md lg:max-w-none">
-                {/* Khung ảnh chính sắc nét */}
-                <div className="relative h-[400px] sm:h-[450px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
+            {/* Cột Logo tròn & Thẻ bảo chứng bên phải */}
+            <div className="lg:col-span-4">
+              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gold/30 shadow-elevated text-center relative overflow-hidden">
+                <div className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-full overflow-hidden border-4 border-gold shadow-2xl mb-6 bg-[#26140A]">
                   <Image
-                    src="/images/hero-expert.jpg"
-                    alt="Chuyên gia Trần Thị Toàn (Toàn Heshi) - Chăm sóc sức khỏe từ gốc"
+                    src="/images/logo-ttspa.jpg"
+                    alt="Logo T&T Spa Face Massage Root"
                     fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 450px"
-                    className="object-cover object-center"
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B4F6C]/90 via-[#0B4F6C]/20 to-transparent" />
-                  
-                  {/* Tag trên ảnh */}
-                  <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <span className="px-3 py-1 bg-sage text-white rounded-full text-[11px] font-bold uppercase tracking-wider mb-2 inline-block shadow-sm">
-                      Nhà Sáng Lập Mô Hình
-                    </span>
-                    <h3 className="text-xl sm:text-2xl font-bold font-display drop-shadow-sm">
-                      Trần Thị Toàn (Toàn Heshi)
-                    </h3>
-                    <p className="text-xs text-sage-soft mt-1 font-medium">
-                      Chuyên gia Da Liễu • Trị Liệu Cơ Mạc • Dinh Dưỡng
-                    </p>
-                  </div>
                 </div>
 
-                {/* Floating Card 1: 10+ năm kinh nghiệm */}
-                <div className="absolute -top-5 -left-5 bg-white p-3.5 sm:p-4 rounded-2xl shadow-elevated border border-slate-100 flex items-center gap-3 animate-bounce-subtle">
-                  <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center text-primary">
-                    <Award className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="block text-lg font-bold text-primary leading-tight">10+ Năm</span>
-                    <span className="text-[11px] text-charcoal-muted">Kinh nghiệm lâm sàng</span>
-                  </div>
-                </div>
+                <span className="inline-block px-3 py-1 rounded-full bg-gold/20 text-gold-dark text-xs font-bold tracking-wider uppercase mb-2">
+                  Thương Hiệu Độc Quyền
+                </span>
+                <h3 className="text-xl font-bold text-primary font-display mb-1">
+                  T&T SPA TUYÊN QUANG
+                </h3>
+                <p className="text-xs text-charcoal-muted mb-4">
+                  Chuyên sâu da liễu & Phương pháp Face Massage Root
+                </p>
 
-                {/* Floating Card 2: 120+ cơ sở spa */}
-                <div className="absolute -bottom-5 -right-5 bg-white p-3.5 sm:p-4 rounded-2xl shadow-elevated border border-slate-100 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-sage-soft flex items-center justify-center text-sage">
-                    <ShieldCheck className="w-5 h-5" />
+                <div className="p-3.5 bg-surface-muted rounded-2xl border border-gold/20 text-left space-y-2 text-xs">
+                  <div className="flex items-center gap-2 text-charcoal">
+                    <CheckCircle2 className="w-4 h-4 text-gold flex-shrink-0" />
+                    <span>9+ Năm kinh nghiệm lâm sàng & dưỡng sinh</span>
                   </div>
-                  <div>
-                    <span className="block text-lg font-bold text-sage leading-tight">120+ Spa</span>
-                    <span className="text-[11px] text-charcoal-muted">Chuyển giao thành công</span>
+                  <div className="flex items-center gap-2 text-charcoal">
+                    <CheckCircle2 className="w-4 h-4 text-gold flex-shrink-0" />
+                    <span>Chuyển giao mô hình thực chiến trên toàn quốc</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-charcoal">
+                    <CheckCircle2 className="w-4 h-4 text-gold flex-shrink-0" />
+                    <span>Hotline tư vấn trực tiếp: <strong>0358.363.058</strong></span>
                   </div>
                 </div>
               </div>
@@ -154,4 +181,3 @@ export function HeroSection() {
     </>
   );
 }
-

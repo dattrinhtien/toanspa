@@ -1,8 +1,9 @@
 import { BlogPost } from '@/types/wordpress';
 
 export const MOCK_CATEGORIES = [
-  { id: 1, name: 'Tất cả', slug: 'all', count: 8 },
-  { id: 6, name: 'Hoạt động & Sự kiện Heshi', slug: 'hoat-dong-su-kien', count: 3 },
+  { id: 1, name: 'Tất cả', slug: 'all', count: 9 },
+  { id: 7, name: 'Face Massage Root', slug: 'face-massage-root', count: 1 },
+  { id: 6, name: 'Hoạt động & Sự kiện T&T', slug: 'hoat-dong-su-kien', count: 3 },
   { id: 2, name: 'Da liễu Chuẩn Y khoa', slug: 'da-lieu-y-khoa', count: 2 },
   { id: 5, name: 'Chuyển giao Mô hình Spa', slug: 'chuyen-giao-spa', count: 1 },
   { id: 3, name: 'Trị liệu Cơ mạc & Cổ vai gáy', slug: 'tri-lieu-co-mac', count: 1 },
@@ -10,6 +11,43 @@ export const MOCK_CATEGORIES = [
 ];
 
 export const MOCK_POSTS: BlogPost[] = [
+  {
+    id: 109,
+    slug: 'face-massage-root-phuong-phap-massage-mat-tri-lieu-doc-quyen',
+    title: 'Face Massage Root: Phương Pháp Massage Mặt Kích Hoạt Tự Tái Tạo Từ Gốc Rễ Cơ Thể',
+    excerpt: 'Chúng tôi không chỉ nhìn vào bề mặt làn da. Chúng tôi nhìn sâu hơn – vào tận gốc rễ. 9 năm nghiên cứu và ứng dụng phương pháp Face Massage Root độc quyền tại T&T Spa.',
+    content: `
+      <p class="lead">"Bạn có thể bận rộn với mọi người, nhưng đừng bận đến mức quên chăm sóc chính mình." Tại T&T Spa, phương pháp Face Massage Root ra đời từ tâm huyết hơn 9 năm nghiên cứu và theo học các chuyên gia hàng đầu về da liễu, dưỡng sinh và y học tự nhiên.</p>
+      
+      <img src="/images/banner-face-massage-root.jpg" alt="Phương pháp Face Massage Root độc quyền tại T&T Spa" />
+
+      <h2 id="nguyen-ly-cot-loi-face-massage-root">1. Ba nguyên lý cốt lõi của Face Massage Root</h2>
+      <ul>
+        <li><strong>Massage mặt kích hoạt chức năng tự sửa chữa và tái tạo tự nhiên:</strong> Tác động sâu vào mạng lưới cân cơ mạc và hệ thần kinh dưới da mặt, giúp kích hoạt cơ chế tự phục hồi mô hạt mà không cần xâm lấn.</li>
+        <li><strong>Kích hoạt đồng ứng chức năng tự chữa lành lên các cơ quan nội tạng:</strong> Dựa trên nguyên lý phản chiếu đồng ứng của y học tự nhiên, kích thích các vùng phản xạ trên khuôn mặt giúp điều hòa chức năng gan, thận và hệ tiêu hóa.</li>
+        <li><strong>Massage sâu tổng thể vùng Mặt – Đầu – Gáy:</strong> Giải phóng hoàn toàn các điểm xơ cứng chèn ép mạch máu lên não, mang lại sự thư thái, giấc ngủ sâu và làn da hồng hào từ bên trong.</li>
+      </ul>
+
+      <h2 id="su-khac-biet-tai-tt-spa">2. Chúng tôi không chỉ nhìn vào bề mặt – Chúng tôi nhìn vào tận gốc</h2>
+      <p>Nhiều cơ sở làm đẹp chỉ tập trung bôi thoa các chất lột tẩy ngoài da để có hiệu ứng trắng bóng tức thì. Tại T&T Spa, chúng tôi kiên định với con đường bền vững: Nuôi dưỡng và giải tỏa ách tắc từ gốc rễ, để cơ thể tự chữa lành cho chính mình.</p>
+
+      <blockquote>"Chăm sóc sức khỏe và sắc đẹp từ gốc là hành trình yêu thương cơ thể đúng cách và khoa học nhất." – Chuyên gia Trần Thị Toàn (Toàn T&T)</blockquote>
+    `,
+    date: '2026-11-01T08:00:00.000Z',
+    formattedDate: '01/11/2026',
+    readTime: '6 phút đọc',
+    coverImage: '/images/banner-face-massage-root.jpg',
+    category: {
+      id: 7,
+      name: 'Face Massage Root',
+      slug: 'face-massage-root',
+    },
+    author: {
+      name: 'Trần Thị Toàn (Toàn T&T)',
+      avatar: '/images/logo-ttspa.jpg',
+      role: 'Sáng lập T&T Spa • Chuyên gia Trị liệu Tự nhiên',
+    },
+  },
   {
     id: 106,
     slug: 'hoi-thao-chuyen-giao-mo-hinh-spa-chuan-y-khoa-heshi-toan-quoc',

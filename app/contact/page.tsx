@@ -50,10 +50,10 @@ export default function ContactPage() {
               Hotline & Zalo
             </h3>
             <a
-              href="tel:0988888888"
-              className="text-base font-bold text-primary hover:text-primary-light transition-colors"
+              href="tel:0358363058"
+              className="text-base font-bold text-primary hover:text-gold transition-colors"
             >
-              0988.888.888
+              0358.363.058
             </a>
             <span className="text-[11px] text-charcoal-muted mt-2">
               Hỗ trợ tư vấn 24/7 qua Zalo
@@ -65,15 +65,15 @@ export default function ContactPage() {
               <Facebook className="w-6 h-6" />
             </div>
             <h3 className="text-base font-bold text-charcoal font-display mb-1">
-              Mạng Xã Hội Cá Nhân
+              Mạng Xã Hội Chính Thức
             </h3>
             <a
-              href="https://www.facebook.com/ngok.nhok.5648"
+              href="https://www.facebook.com/profile.php?id=100063462697969&locale=vi_VN"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs font-semibold text-[#1877F2] hover:underline mt-1"
             >
-              Facebook: Trần Thị Toàn
+              Fanpage: Toàn T&T spa
             </a>
             <span className="text-[11px] text-charcoal-muted mt-2">
               Theo dõi các chia sẻ ca bệnh lâm sàng

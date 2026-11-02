@@ -11,6 +11,7 @@ import { ConsultationModal } from '@/components/shared/ConsultationModal';
 const NAV_LINKS = [
   { href: '/', label: 'Trang chủ' },
   { href: '/about', label: 'Về tôi' },
+  { href: '/#face-massage-root', label: 'Face Massage Root' },
   { href: '/#pillars', label: 'Kiềng 3 Trụ cột' },
   { href: '/training', label: 'Chuyển giao Spa' },
   { href: '/services', label: 'Dịch vụ & Liệu trình' },
@@ -39,18 +40,18 @@ export function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 bg-gradient-to-r from-[#0B4F6C] via-[#094159] to-[#063246] text-white shadow-elevated border-b border-white/10 ${
+        className={`sticky top-0 z-40 w-full transition-all duration-300 bg-gradient-to-r from-[#26140A] via-[#3D2314] to-[#4A2E18] text-white shadow-elevated border-b border-[#C59B27]/40 ${
           isScrolled ? 'py-2.5 shadow-2xl backdrop-blur-md' : 'py-3.5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Logo Thương Hiệu To & Nổi Bật */}
+            {/* Logo Thương Hiệu Chính Thức T&T SPA FACE MASSAGE ROOT */}
             <Link href="/" className="flex items-center gap-3.5 group">
-              <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-sage-soft shadow-elevated group-hover:scale-105 transition-transform flex-shrink-0 bg-white/10">
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-gold shadow-elevated group-hover:scale-105 transition-transform flex-shrink-0 bg-[#26140A]">
                 <Image
-                  src="/images/avatar.jpg"
-                  alt="Chuyên gia Trần Thị Toàn (Toàn Heshi)"
+                  src="/images/logo-ttspa.jpg"
+                  alt="T&T SPA - Face Massage Root - Trần Thị Toàn"
                   fill
                   priority
                   sizes="(max-width: 640px) 56px, 64px"
@@ -59,45 +60,55 @@ export function Header() {
               </div>
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xl sm:text-2xl font-extrabold text-white font-display tracking-tight group-hover:text-sage-soft transition-colors drop-shadow-sm">
-                    Trần Thị Toàn
+                  <span className="text-xl sm:text-2xl font-extrabold text-white font-display tracking-tight group-hover:text-gold-light transition-colors drop-shadow-sm">
+                    T&T SPA
                   </span>
-                  <CheckCircle2 className="w-4 h-4 text-sage-light fill-sage-light/20 flex-shrink-0" />
+                  <span className="text-xs px-2 py-0.5 rounded-md bg-gold/20 text-gold-light border border-gold/40 font-semibold uppercase tracking-wider hidden sm:inline-block">
+                    Toàn T&T
+                  </span>
                 </div>
-                <span className="text-xs sm:text-sm font-bold text-sage-soft tracking-wider uppercase drop-shadow-sm">
-                  Toàn Heshi • Chăm Sóc Sức Khỏe Từ Gốc
+                <span className="text-xs sm:text-sm font-bold text-gold-light tracking-wide uppercase drop-shadow-sm">
+                  Face Massage Root • Sức Khỏe Từ Gốc
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <nav className="hidden xl:flex items-center gap-6">
               {NAV_LINKS.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-sm font-semibold transition-all relative py-1 hover:text-sage-soft ${
-                      isActive ? 'text-sage-soft font-bold' : 'text-white/90'
+                    className={`text-sm font-semibold transition-all relative py-1 hover:text-gold-light ${
+                      isActive ? 'text-gold font-bold' : 'text-white/90'
                     }`}
                   >
                     {link.label}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-sage-light rounded-full shadow-sm" />
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gold rounded-full shadow-sm" />
                     )}
                   </Link>
                 );
               })}
             </nav>
 
-            {/* Action Buttons */}
-            <div className="hidden lg:flex items-center gap-3">
+            {/* Hotline & Action Buttons */}
+            <div className="hidden lg:flex items-center gap-4">
+              <a
+                href="tel:0358363058"
+                className="flex items-center gap-2 text-xs xl:text-sm font-bold text-gold-light hover:text-white transition-colors py-1.5 px-3 rounded-full bg-white/5 border border-gold/30"
+              >
+                <Phone className="w-4 h-4 text-gold animate-pulse" />
+                <span>0358.363.058</span>
+              </a>
+
               <Button
                 variant="secondary"
                 size="md"
                 onClick={() => setIsModalOpen(true)}
-                className="bg-sage hover:bg-sage-light text-white font-bold shadow-elevated border border-white/20"
+                className="bg-gold hover:bg-gold-light text-[#26140A] font-extrabold shadow-elevated border border-gold/60"
               >
                 <HeartHandshake className="w-4 h-4 mr-1.5" />
                 Tư vấn chuyển giao
@@ -105,12 +116,19 @@ export function Header() {
             </div>
 
             {/* Mobile Menu Trigger */}
-            <div className="flex items-center gap-2 lg:hidden">
+            <div className="flex items-center gap-2 xl:hidden">
+              <a
+                href="tel:0358363058"
+                className="p-2 rounded-xl bg-gold/20 text-gold-light"
+                aria-label="Gọi điện"
+              >
+                <Phone className="w-4 h-4" />
+              </a>
               <Button
                 variant="secondary"
                 size="sm"
                 onClick={() => setIsModalOpen(true)}
-                className="text-xs px-3 py-1.5 bg-sage text-white font-bold"
+                className="text-xs px-3 py-1.5 bg-gold text-[#26140A] font-bold"
               >
                 Tư vấn
               </Button>
@@ -127,7 +145,7 @@ export function Header() {
 
         {/* Mobile Menu Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-white/10 bg-[#094159] animate-fade-in shadow-2xl">
+          <div className="xl:hidden border-t border-gold/30 bg-[#26140A] animate-fade-in shadow-2xl">
             <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
               {NAV_LINKS.map((link) => {
                 const isActive = pathname === link.href;
@@ -137,7 +155,7 @@ export function Header() {
                     href={link.href}
                     className={`block px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
                       isActive
-                        ? 'bg-white/15 text-sage-soft font-bold'
+                        ? 'bg-gold/20 text-gold-light font-bold'
                         : 'text-white/90 hover:bg-white/10'
                     }`}
                   >
@@ -148,20 +166,20 @@ export function Header() {
               <div className="pt-3 border-t border-white/10 flex flex-col gap-2">
                 <Button
                   variant="secondary"
-                  className="w-full justify-center bg-sage hover:bg-sage-light text-white font-bold py-3"
+                  className="w-full justify-center bg-gold hover:bg-gold-light text-[#26140A] font-bold py-3"
                   onClick={() => {
                     setMobileMenuOpen(false);
                     setIsModalOpen(true);
                   }}
                 >
                   <HeartHandshake className="w-4 h-4 mr-2" />
-                  Tư vấn chuyển giao mô hình
+                  Tư vấn chuyển giao mô hình T&T
                 </Button>
                 <a
-                  href="tel:0988888888"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 text-xs font-semibold text-white/80 hover:text-white transition-colors"
+                  href="tel:0358363058"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 text-xs font-semibold text-gold-light hover:text-white transition-colors"
                 >
-                  <Phone className="w-3.5 h-3.5 text-sage-light" /> Hotline: 0988.888.888 (Tuyên Quang)
+                  <Phone className="w-3.5 h-3.5 text-gold" /> Hotline: 0358.363.058 (Tuyên Quang)
                 </a>
               </div>
             </div>

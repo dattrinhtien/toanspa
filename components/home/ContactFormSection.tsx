@@ -65,8 +65,10 @@ export function ContactFormSection() {
                     <span>Cơ sở chính: TP. Tuyên Quang, Tỉnh Tuyên Quang</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-sage-light flex-shrink-0" />
-                    <span>Hotline / Zalo: 0988.888.888</span>
+                    <Phone className="w-5 h-5 text-gold flex-shrink-0" />
+                    <a href="tel:0358363058" className="hover:underline font-bold text-gold-light">
+                      Hotline / Zalo: 0358.363.058
+                    </a>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="w-5 h-5 text-sage-light flex-shrink-0" />
@@ -155,7 +157,7 @@ export function ContactFormSection() {
                         <input
                           type="tel"
                           required
-                          placeholder="Ví dụ: 0988 123 456"
+                          placeholder="Ví dụ: 0358 363 058"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           className="w-full pl-10 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"

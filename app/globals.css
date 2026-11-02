@@ -11,8 +11,8 @@
   html {
     scroll-behavior: smooth;
     font-family: var(--font-inter);
-    color: #1e293b;
-    background-color: #faf9f6;
+    color: #2b1f17;
+    background-color: #faf7f2;
   }
 
   body {
@@ -20,9 +20,9 @@
   }
 }
 
-/* Custom styling cho bài viết blog render từ WordPress HTML */
+/* Custom styling cho bài viết blog */
 .prose-content {
-  color: #334155;
+  color: #4a3b32;
   font-size: 1.075rem;
   line-height: 1.85;
 }
@@ -34,17 +34,21 @@
 .prose-content p.lead {
   font-size: 1.25rem;
   line-height: 1.75;
-  color: #0b4f6c;
-  font-weight: 500;
-  border-left: 4px solid #4e9f3d;
+  color: #3d2314;
+  font-weight: 600;
+  border-left: 4px solid #c59b27;
   padding-left: 1.25rem;
   margin-bottom: 2rem;
+  background-color: #faf3e0;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .prose-content h2 {
   font-size: 1.65rem;
   font-weight: 700;
-  color: #0b4f6c;
+  color: #3d2314;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   scroll-margin-top: 6rem;
@@ -53,7 +57,7 @@
 .prose-content h3 {
   font-size: 1.35rem;
   font-weight: 600;
-  color: #1a5f7a;
+  color: #5a3620;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   scroll-margin-top: 6rem;
@@ -78,25 +82,25 @@
 }
 
 .prose-content strong {
-  color: #0f172a;
-  font-weight: 600;
+  color: #26140a;
+  font-weight: 700;
 }
 
 .prose-content blockquote {
   font-style: italic;
   padding: 1.25rem 1.75rem;
-  background-color: #f0f7fa;
-  border-left: 4px solid #0b4f6c;
+  background-color: #faf3e0;
+  border-left: 4px solid #c59b27;
   border-radius: 0 0.5rem 0.5rem 0;
   margin: 2rem 0;
-  color: #094159;
+  color: #3d2314;
 }
 
 .prose-content img {
-  border-radius: 0.75rem;
+  border-radius: 1rem;
   margin: 2rem 0;
   max-width: 100%;
   height: auto;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px -5px rgba(61, 35, 20, 0.12);
+  border: 1px solid rgba(197, 155, 39, 0.2);
 }
-

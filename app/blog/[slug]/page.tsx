@@ -223,7 +223,7 @@ export default async function BlogPostDetailPage({ params }: BlogPostDetailProps
                 Bạn Là Chủ Spa & Muốn Nhận Chuyển Giao Phác Đồ Này?
               </h4>
               <p className="text-xs text-primary-100 leading-relaxed">
-                Được đào tạo 1-1 trực tiếp bởi Chuyên gia Toàn Heshi, bàn giao tài liệu SOP và hỗ trợ phân phối dược mỹ phẩm chính hãng.
+                Được đào tạo 1-1 trực tiếp bởi Chuyên gia Toàn T&T Spa, bàn giao tài liệu SOP và phác đồ Face Massage Root độc quyền.
               </p>
               <Link href="/training" className="block">
                 <Button variant="white" size="sm" className="w-full text-xs">
@@ -238,13 +238,13 @@ export default async function BlogPostDetailPage({ params }: BlogPostDetailProps
                 Cần tư vấn trực tiếp về tình trạng?
               </span>
               <a
-                href="tel:0988888888"
+                href={`tel:${process.env.NEXT_PUBLIC_HOTLINE || '0358363058'}`}
                 className="text-lg font-bold text-sage hover:text-sage-light transition-colors block font-display"
               >
-                Hotline: 0988.888.888
+                Hotline: 0358.363.058
               </a>
               <p className="text-[11px] text-charcoal-soft">
-                Hỗ trợ từ 08:30 – 19:30 hàng ngày
+                Hỗ trợ tư vấn & Đặt lịch hẹn trước
               </p>
             </div>
           </aside>
