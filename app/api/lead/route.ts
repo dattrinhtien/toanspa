@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     // Tại đây có thể dễ dàng gắn webhook Telegram, Zalo ZNS, Google Sheet hoặc CRM
     return NextResponse.json({
       success: true,
-      message: 'Đăng ký tư vấn thành công! Chuyên gia Toàn Heshi sẽ liên hệ sớm nhất.',
+      message: 'Đăng ký tư vấn thành công! Chuyên gia Toàn T&T Spa sẽ liên hệ sớm nhất.',
     });
   } catch (error) {
     console.error('Lead submission error:', error);

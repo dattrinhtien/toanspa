@@ -78,7 +78,7 @@ export function ConsultationModal({
           </button>
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/15 backdrop-blur-md rounded-full text-xs font-semibold mb-2">
             <Sparkles className="w-3.5 h-3.5 text-sage-soft" />
-            Đồng hành 1-1 cùng Chuyên gia Toàn Heshi
+            Đồng hành 1-1 cùng Chuyên gia Toàn T&T Spa
           </div>
           <h3 className="text-xl sm:text-2xl font-bold font-display">
             Đăng Ký Tư Vấn & Chuyển Giao
