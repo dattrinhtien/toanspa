@@ -88,30 +88,50 @@ export function ContactFormSection() {
             {/* Cột phải: Form thu thập thông tin */}
             <div className="lg:col-span-7 p-8 sm:p-10">
               {isSubmitted ? (
-                <div className="py-12 text-center">
+                <div className="py-8 text-center max-w-md mx-auto">
                   <div className="w-16 h-16 bg-sage-soft text-sage rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle2 className="w-10 h-10" />
                   </div>
                   <h4 className="text-2xl font-bold text-primary font-display mb-2">
                     Yêu Cầu Đã Được Tiếp Nhận!
                   </h4>
-                  <p className="text-sm text-charcoal-muted max-w-md mx-auto mb-6">
-                    Chuyên gia Trần Thị Toàn và đội ngũ chuyên môn sẽ sớm liên lạc với bạn để gửi tài liệu và tư vấn giải pháp phù hợp nhất.
+                  <p className="text-sm text-charcoal-muted mb-6 leading-relaxed">
+                    Cảm ơn bạn đã để lại thông tin. Bạn có thể mở Zalo nhắn tin trực tiếp với Chuyên gia Trần Thị Toàn để được tư vấn nhanh nhất:
                   </p>
-                  <Button
-                    variant="outline"
-                    onClick={() => {
-                      setIsSubmitted(false);
-                      setFormData({
-                        fullName: '',
-                        phone: '',
-                        serviceInterest: 'transfer',
-                        note: '',
-                      });
-                    }}
-                  >
-                    Gửi thêm yêu cầu khác
-                  </Button>
+
+                  <div className="space-y-3">
+                    <a
+                      href="https://zalo.me/0358363058"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#0068FF] hover:bg-[#0055D4] text-white font-bold rounded-2xl shadow-lg shadow-blue-500/25 transition-all text-sm group"
+                    >
+                      <svg
+                        className="w-5 h-5 fill-current"
+                        viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M24 4C12.95 4 4 12.28 4 22.5c0 5.86 3.02 11.08 7.74 14.59-.34 2.53-1.28 5.68-2.67 7.71a1 1 0 0 0 1.25 1.44c3.96-1.74 7.55-3.86 9.49-4.88 1.37.42 2.81.64 4.19.64 11.05 0 20-8.28 20-18.5S35.05 4 24 4zm8.8 24.3c-.3.4-.9.6-1.5.4-1.9-.6-5.8-2.7-8.1-4.7-2.1-1.8-3.6-4.5-3.8-6.5-.1-.7.2-1.3.7-1.6.5-.4 1.2-.4 1.7 0 .9.8 1.8 1.9 2.1 2.3.3.4.3.9 0 1.3-.2.3-.5.6-.7.9-.3.3-.3.6 0 .9 1.1 1.4 2.7 2.8 4.2 3.7.4.2.7.2 1 0 .3-.3.7-.7.9-1 .3-.3.8-.4 1.2-.1.4.3 1.7 1 2.5 1.7.5.5.6 1.1.1 1.8z" />
+                      </svg>
+                      <span>Mở Zalo Trò Chuyện Cùng Chuyên Gia (0358.363.058)</span>
+                    </a>
+
+                    <Button
+                      variant="outline"
+                      className="w-full"
+                      onClick={() => {
+                        setIsSubmitted(false);
+                        setFormData({
+                          fullName: '',
+                          phone: '',
+                          serviceInterest: 'transfer',
+                          note: '',
+                        });
+                      }}
+                    >
+                      Gửi thêm yêu cầu khác
+                    </Button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
