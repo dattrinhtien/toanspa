@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-heading: 'Merriweather', Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-inter);
+    color: #1e293b;
+    background-color: #faf9f6;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Custom styling cho bài viết blog render từ WordPress HTML */
+.prose-content {
+  color: #334155;
+  font-size: 1.075rem;
+  line-height: 1.85;
+}
+
+.prose-content p {
+  margin-bottom: 1.5rem;
+}
+
+.prose-content p.lead {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  color: #0b4f6c;
+  font-weight: 500;
+  border-left: 4px solid #4e9f3d;
+  padding-left: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.prose-content h2 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #0b4f6c;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  scroll-margin-top: 6rem;
+}
+
+.prose-content h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #1a5f7a;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 6rem;
+}
+
+.prose-content ul,
+.prose-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose-content ul {
+  list-style-type: disc;
+}
+
+.prose-content ol {
+  list-style-type: decimal;
+}
+
+.prose-content li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-content strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.prose-content blockquote {
+  font-style: italic;
+  padding: 1.25rem 1.75rem;
+  background-color: #f0f7fa;
+  border-left: 4px solid #0b4f6c;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 2rem 0;
+  color: #094159;
+}
+
+.prose-content img {
+  border-radius: 0.75rem;
+  margin: 2rem 0;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
